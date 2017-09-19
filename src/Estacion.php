@@ -3,6 +3,8 @@
 namespace Mibici;
 
 class Estacion implements EstacionInterface {
+    
+    protected $listadebicicletasDisponibles = array();
 
     public function sacarBici(BicicletaInterface $bici) {
 
@@ -21,7 +23,7 @@ class Estacion implements EstacionInterface {
     }
 
     public function bicicletasDisponibles() {
-
+        return $this->listadebicicletasDisponibles;
     }
 
     public function enServicio() {
