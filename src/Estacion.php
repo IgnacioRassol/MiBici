@@ -12,13 +12,15 @@ class Estacion implements EstacionInterface {
 
     public function dejarBici(BicicletaInterface $bici) {
         if ($this->anclajesDisponibles() > 0){
-            if(!array_key_exists(0, $listadebicicletasDisponibles){
-                
+            for($i = -1; $i < $this->anclajesTotales()-1; $i++){
+                if(!isset($this->listadebicicletasDisponibles[$i+1]){
+                    $this->listadebicicletasDisponibles[$i+1] = $bici;
+                }
             }
-            for($i = 0; $i < $this->anclajesTotales(); $i++){
-                
-            }
+        } else{
+            return "No hay espacio para dejar la bici";
         }
+               
     }
 
     public function anclajesDisponibles() {
