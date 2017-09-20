@@ -11,5 +11,12 @@ class EstacionTest extends TestCase {
         $estacion = new Estacion;
         $this->assertTrue($estacion->enServicio());
     }
+    
+    public function testEstacionbicicletasDisponibles() {
+        $estacion = new Estacion;
+        $bici = new $bicicleta;
+        $estacion->dejarBici($bici);
+        
+    }
 
 }
